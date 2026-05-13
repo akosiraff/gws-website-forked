@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   {
@@ -60,15 +61,16 @@ export default function Navbar() {
             {/* Logo */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center gap-3 group"
+              className="flex items-center group"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/30">
-                <span className="text-white font-black text-sm tracking-tight">GW</span>
-              </div>
-              <div className="hidden sm:block">
-                <p className="text-white font-bold text-[15px] leading-tight">Global Workforce</p>
-                <p className="text-blue-400 text-[10px] font-semibold tracking-widest uppercase leading-tight">Solutions</p>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Global Workforce Solutions"
+                width={320}
+                height={70}
+                priority
+                className="h-12 lg:h-14 w-auto object-contain"
+              />
             </button>
 
             {/* Desktop nav */}
