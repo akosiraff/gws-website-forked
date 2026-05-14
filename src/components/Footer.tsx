@@ -80,7 +80,7 @@ export default function Footer() {
             {/* Footer Logo */}
             <div className="mb-6">
               <Image
-                src="/footer-logo.png"
+                src="/footer-logo.webp"
                 alt="Global Workforce Solutions"
                 width={260}
                 height={90}
